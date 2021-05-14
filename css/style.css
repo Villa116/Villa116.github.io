@@ -1,0 +1,246 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: auto 0;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 16px;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+#main-nav {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+    font-weight:500;
+    text-transform: uppercase;
+    background-color: #0F1011;
+}
+
+li {
+    padding: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #eef0f5;
+}
+
+.nav-link:hover {
+    color: chocolate;
+}
+
+#welcome-section {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    /* Image by Fernando Hernandez @_ferh97 */
+    background-image:url(https://images.unsplash.com/photo-1546146830-2cca9512c68e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80);
+    background-size:cover;
+    background-position: center center;
+    margin-top: 50px;
+}
+
+h1 {
+    text-align: center;
+    color: #df8b05;
+    padding: 100px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    font-weight:900;
+    text-transform: uppercase;
+    text-shadow:2px 1px 1px black;
+    animation-name: rotate;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+    50% {
+        transform:rotate3d(10, 10, 90, 360deg);
+        opacity: 0.09;
+    }
+
+    100% {
+        transform: scale(1.2);
+        opacity:unset;
+    }
+}
+
+h2, h3, h4 {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+.first-line {
+    width: 60px;
+    border: 1.2px solid #df8b05;
+}
+
+.second-line {
+    width: 30px;
+    border: 1.2px solid #df8b05;
+}
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    background-color: #dce0e4;
+}
+
+#projects-grid {
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    margin: 50px;
+}
+
+img {
+    width: 100%;
+}
+
+.project-image {
+    display: flex;
+    flex-direction: column;
+    background-color: #28292b;
+    border-radius:10px;
+}
+
+.project-image:hover {
+    transition: all .3s ease-in-out;
+    transform: scale(1.1);
+}
+
+.project-tile:hover {
+    color: #df8b05;
+}
+
+.project-tile {
+    text-align: center;
+    padding: 8px;
+}
+
+.project-title {
+    display: flex;
+    justify-content: center;
+    font-weight:600;
+    padding: 10px;
+}
+
+.view-projects {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+button {
+    padding: 5px;
+    width: 100px;
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: #fcca7a;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.2);
+    animation-name: background-color;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes background-color {
+    100% {
+        background-color: chocolate;
+    }
+}
+#contacts {
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0px 30px 0px;
+}
+
+#social-media {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.social-media-icon {
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 100%;
+    background-color: #dcdee0;
+}
+
+.social-media-icon:hover {
+    background-color: chocolate;
+}
+
+.facebook {
+    display: flex;
+    align-items: center;
+    padding: 25px;
+}
+
+.pinterest, .google-plus {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.github {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+#footer {
+    display: flex;
+    justify-content: center;
+    background-color: #16191b;
+    color: #eef0f5;
+}
+
+.foot-note {
+    text-align: center;
+    font-size: 12px;
+}
+
+.last {
+    margin-bottom: 30px;
+}
+
+@media screen and (max-width: 700px) {
+    #main-nav {
+        justify-content: center;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    h1 {
+        padding: 80px;
+    }
+
+}
+
+@media screen and (max-height: 600px) {
+    h1 {
+        padding: 0px;
+    }
+}
